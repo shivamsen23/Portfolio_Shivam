@@ -253,7 +253,37 @@ onClick={() => setIndex(itemIndex)}
 //             </div>
 //           );
 //         })}
-  {aboutData[index].info.map((item, itemIndex) => {
+//   {aboutData[index].info.map((item, itemIndex) => {
+//   return (
+//     <div
+//       key={itemIndex}
+//       className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'
+//     >
+//       <div className='font-light mb-2 md:mb-0'>{item.title}</div>
+//       <div className='hidden md:flex'>-</div>
+//       <div>{item.stage}</div>
+//       <div className='flex gap-x-4'>
+//         {item.icons?.map((icon, iconIndex) => {
+//           return <div key={iconIndex} className='text-2xl text-white'>{icon}</div>;
+//         })}
+//       </div>
+//     </div>
+//   );
+// })}
+//       </div>
+//     </div>
+//   );
+// })}
+
+// </div>
+//         </div>
+
+
+//       </div>
+//     </div>
+//   );
+// };
+{aboutData[index].info.map((item, itemIndex) => {
   return (
     <div
       key={itemIndex}
@@ -273,16 +303,6 @@ onClick={() => setIndex(itemIndex)}
       </div>
     </div>
   );
-})}
-
-</div>
-        </div>
-
-
-      </div>
-    </div>
-  );
 };
-
 
 export default About;
