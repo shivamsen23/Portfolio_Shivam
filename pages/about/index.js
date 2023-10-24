@@ -7,9 +7,88 @@ import { SiMongodb, SiNextdotjs, SiFramer } from 'react-icons/si';
 import CountUp from 'react-countup';
 
 const aboutData = [
-  // Your data array
-];
+  {
+    title: 'skills',
+    info: [
+      {
+        title: 'Web Development',
+        icons: [
+          <FaHtml5 />,
+          <FaCss3 />,
+          <FaJs />,
+          <FaReact />,
+          <SiNextdotjs />,
+          <SiFramer />,
+          <FaWordpress />,
+          <SiMongodb/>
+        ],
+      },
+     
+      {
+        title: 'Java /Mysql',
+        icons: [<FaJava/>,<FaDatabase/>],
+      },
+      {
+        title: 'Technical Subjects',
+        icons: [<FaFileCode/>, <FaDatabase/> , <FaServer/>,<FaObjectGroup/>]
+      },
+    ],
 
+  },
+  {
+    title: 'Educations',
+    info: [
+      {
+        title: 'B.Tech in CSE (OIST , Bhopal)',
+        stage: '2020 - 2024',
+      },
+      {
+        title: 'Inter School (DAV ,Burhar)',
+        stage: '2018 - 2019',
+      },
+      {
+        title: 'Secondary School (Carmel Convent School ,Burhar)',
+        stage: '2016 - 2017',
+      },
+    ],
+  },
+  {
+    title: 'Experience',
+    info: [
+      {
+        title: 'Google Developer Student Council (GDSC-OIST) ',
+        stage: 'OCT 2022 - FEB 2023',
+      },
+      {
+        title: 'Marketerella  - Worked as a Front-end Developer',
+        stage: 'SEP 2022 - OCT 2022',
+      },
+    
+    ],
+  },
+  {
+    title: 'certifications',
+    info: [
+      {
+        title: 'Coursera Certification in Java',
+        stage: '2022',
+      },
+      {
+        title: 'Certification in Smart India Hackathon',
+        stage: '2022',
+      },
+      {
+        title: 'Cousera Specialization Certificate on Web Development',
+        stage: '2022',
+      },
+      {
+        title: 'Certificate of Appreciation in Academics',
+        stage: '2021',
+      },
+     
+    ],
+  },
+];
 const About = () => {
   const [index, setIndex] = useState(0);
 
@@ -56,7 +135,7 @@ const About = () => {
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => (
               <div
-                key={itemIndex}
+                key={itemIndex} // Add key here
                 className={`${
                   index === itemIndex &&
                   'text-accent after:w-[100%] after:bg-accent after: transition-all after:duration-300'
@@ -70,7 +149,7 @@ const About = () => {
           <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
             {aboutData[index].info.map((item, itemIndex) => (
               <div
-                key={itemIndex}
+                key={itemIndex} // Add key here
                 className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'
               >
                 <div className='font-light mb-2 md:mb-0'>{item.title}</div>
