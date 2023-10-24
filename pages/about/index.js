@@ -190,7 +190,7 @@ onClick={() => setIndex(itemIndex)}
 {aboutData.map((item, itemIndex) => {
   return (
     <div
-      key={itemIndex} // Add key prop here
+      key={itemIndex} // Add key here
       className={`${
         index === itemIndex &&
         'text-accent after:w-[100%] after:bg-accent after: transition-all after:duration-300'
@@ -201,6 +201,7 @@ onClick={() => setIndex(itemIndex)}
     </div>
   );
 })}
+
 </div>
 <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
 {/* {aboutData[index].info.map((item,itemIndex)=>{
@@ -225,20 +226,25 @@ onClick={() => setIndex(itemIndex)}
 {aboutData[index].info.map((item, itemIndex) => {
   return (
     <div
-      key={itemIndex} // Add key prop here
-      className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'
+      key={itemIndex} // Add key here
+      className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
     >
-      <div className='font-light mb-2 md:mb-0'>{item.title}</div>
-      <div className='hidden md:flex'>-</div>
+      <div className="font-light mb-2 md:mb-0">{item.title}</div>
+      <div className="hidden md:flex">-</div>
       <div>{item.stage}</div>
-      <div className='flex gap-x-4'>
-        {item.icons?.map((icon, iconIndex) => {
-          return <div key={iconIndex} className='text-2xl text-white'>{icon}</div>; // Add key prop here
+      <div className="flex gap-x-4">
+        {item.icons?.map((icon, innerItemIndex) => {
+          return (
+            <div key={innerItemIndex} className="text-2xl text-white">
+              {icon}
+            </div>
+          );
         })}
       </div>
     </div>
   );
 })}
+
 </div>
         </div>
 
